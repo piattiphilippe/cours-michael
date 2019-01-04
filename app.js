@@ -1,14 +1,13 @@
-const age = 14.9;
+const noms = ["cornillon","arnaud","piatti","hersan","felhmann"];
+const prenoms = ["michaël","daphné","philippe","rené","matias"];
 
-if (age >= 50) {
-    console.log("foutu");
-}
-else if (age >= 18) {
-    console.log("majeur");
-}
-else if (age >= 15) {
-    console.log("mineur")
-}
-else {
-    console.log("enfant");
+const longueur = noms.length
+
+
+// console.log("nom : " + noms[0] + " - prénom : " + prenoms[0]);
+// console.log("nom : " + noms[1] + " - prénom : " + prenoms[1]);
+// console.log("nom : " + noms[2] + " - prénom : " + prenoms[2]);
+
+for (let i = 0; i < longueur; i++) {
+    console.log("nom : " + noms[i] + " - prénom : " + prenoms[i]);
 }
