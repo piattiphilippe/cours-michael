@@ -1,13 +1,21 @@
-const noms = ["cornillon","arnaud","piatti","hersan","felhmann"];
-const prenoms = ["michaël","daphné","philippe","rené","matias"];
+let prenoms = [];
+let noms = [];
 
-const longueur = noms.length
+const ul = document.querySelector('ul');
 
+function ajouterPersonne() {
+    let prenom = prompt("Renseigner un prénom de personne :");
+    let nom = prompt("Renseigner un nom cette fois-ci :");
+    prenoms.push(prenom);
+    noms.push(nom);
 
-// console.log("nom : " + noms[0] + " - prénom : " + prenoms[0]);
-// console.log("nom : " + noms[1] + " - prénom : " + prenoms[1]);
-// console.log("nom : " + noms[2] + " - prénom : " + prenoms[2]);
+    console.log(prenoms);
+}
 
-for (let i = 0; i < longueur; i++) {
-    console.log("nom : " + noms[i] + " - prénom : " + prenoms[i]);
+function afficherPersonne() {
+    ul.innerHTML = "";
+    
+    for (let i = 0; i < prenoms.length; i++) {
+        ul.innerHTML += "<li>Nom : " + noms[i] + " - Prénom : " + prenoms[i] + "</li>";
+    }
 }
