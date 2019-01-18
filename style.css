@@ -1,0 +1,13 @@
+.ciel { background: rgb(114, 196, 221); }
+.terre { background: rgb(100, 64, 22); }
+.mur { background: rgb(251, 204, 116); }
+.porte { background: rgb(163, 5, 155); }
+.toit { background: rgb(177, 39, 39); }
+.nuage { background: rgb(255, 255, 255); }
+.tronc { background: rgb(98, 57, 10); }
+.cime { background: rgb(20, 173, 58); }
+
+td {
+    width: 10px;
+    height: 10px;
+}
