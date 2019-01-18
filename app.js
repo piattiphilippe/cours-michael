@@ -1,12 +1,24 @@
-const ages = [15, 24, 3, 58, 42, 17, 85, 2];
+const contacts = [
+    ["Philippe", "Piatti", "philippe@gmail.com"],
+    ["Michael", "Cornillon", "michael@gmail.com"],
+    ["Daphné", "Cornilon", "daphne@gmail.com"],
+    ["René", "Hersent", "rené@gmail.com"],
+];
 
-// Parcours du tableau ages
-for (let i = 0; i < ages.length; i++) {
-    console.log("tu a " + ages[i] + " ans");
-}
+const corpsDuTableauHTML = document.querySelector('tbody');
+let index = 0;
 
+window.onkeyup = function() {
+    if (index >= contacts.length) {
+        return; // Ne retourne rien !!! (stop net la fonction)
+    }
 
-// La même chose encore plus rapide
-for (let age of ages) {
-    console.log(`tu a ${age} ans`);
-}
+    corpsDuTableauHTML.innerHTML += `
+        <tr>
+            <td>${contacts[index][0]}</td>
+            <td>${contacts[index][1]}</td>
+            <td>${contacts[index][2]}</td>
+        </tr>
+    `;
+    index++;
+};
